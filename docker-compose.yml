@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+
+  python:
+    build: ./images/python/.
+    container_name: python
+    command: python3 app.py
+    volumes:
+      - ./volumes/python:/app
+    ports:
+      - "5000:5000" 
